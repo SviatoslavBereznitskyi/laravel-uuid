@@ -1,5 +1,5 @@
 # Install the app
-install: build dependencies
+install: build dependencies test
 
 # Build app container
 build:
@@ -16,6 +16,14 @@ update:
 # Show outdated dependencies
 outdated:
 	docker run --rm -it -v ${PWD}:/app app composer outdated
+
+# Run the testsuite
+test:
+	docker run --rm -it -v ${PWD}:/app app vendor/bin/phpunit
+
+# Generate a coverage report
+coverage:
+	docker run --rm -it -v ${PWD}:/app app vendor/bin/phpunit --coverage-html tests/report
 
 # Fix code style
 fix:
