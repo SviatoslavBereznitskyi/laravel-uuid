@@ -1,0 +1,28 @@
+{
+  "name": "nevadskiy/laravel-uuid",
+  "description": "The package provides UUID keys functionality for Eloquent models.",
+  "license": "MIT",
+  "keywords": ["uuid", "laravel"],
+  "homepage": "https://github.com/nevadskiy/laravel-uuid",
+  "authors": [
+    {
+      "name": "Nevadskiy",
+      "email": "nevadskiy@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "laravel/framework": "^7.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nevadskiy\\Uuid\\": "src/"
+    }
+  },
+  "scripts": {
+    "fix": "php-cs-fixer fix"
+  }
+}
