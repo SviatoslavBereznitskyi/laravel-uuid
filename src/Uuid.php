@@ -3,7 +3,7 @@
 namespace Nevadskiy\Uuid;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Str;
+use Ramsey\Uuid\Uuid as UuidFactory;
 
 /**
  * @mixin Model
@@ -33,7 +33,7 @@ trait Uuid
      */
     public static function generateId(): string
     {
-        return Str::uuid();
+        return UuidFactory::uuid4();
     }
 
     /**
