@@ -14,7 +14,16 @@ class UuidTest extends TestCase
         $post = new Post();
         $post->save();
 
-        self::assertNotEmpty($post->id);
-        self::assertTrue(Uuid::isValid($post->id));
+        self::assertNotEmpty($post->getKey());
+
+        self::assertTrue(
+            Uuid::isValid($post->getKey())
+        );
+    }
+
+    /** @test */
+    public function it_uses_string_key_type(): void
+    {
+        self::assertEquals('string', (new Post())->getKeyType());
     }
 }
