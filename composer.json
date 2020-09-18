@@ -11,8 +11,8 @@
     }
   ],
   "require": {
-    "php": "^7.2",
-    "laravel/framework": "^6.0|^7.0",
+    "php": "^7.3",
+    "laravel/framework": "^6.0|^7.0|^8.0",
     "ramsey/uuid": "^3.7|^4.0"
   },
   "require-dev": {
