@@ -16,16 +16,34 @@ trait Uuid
     public static function bootUuid(): void
     {
         static::creating(static function (self $model) {
-            $model->setUuid();
+            $model->setUuidIfEmpty();
         });
     }
 
     /**
-     * Set a generated UUID to the model.
+     * Set UUID to the model if it is not set yet.
+     */
+    public function setUuidIfEmpty(): void
+    {
+        if (! is_null($this->getUuid())) {
+            $this->setUuid();
+        }
+    }
+
+    /**
+     * Set a UUID to the model.
      */
     public function setUuid(): void
     {
         $this->setAttribute($this->getKeyName(), static::generateId());
+    }
+
+    /**
+     * Get a UUID of the model.
+     */
+    public function getUuid(): ?string
+    {
+        return $this->getKeyName();
     }
 
     /**

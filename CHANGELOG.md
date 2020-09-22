@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 
+## [0.3.0] - 2020-09-22
+### Changed
+- Now UUID can be set manually
+
+## [0.2.0] - 2020-09-18
+### Added
+- Laravel 8 support
+
 ## [0.1.0] - 2020-08-12
 ### Added
 - Everything
