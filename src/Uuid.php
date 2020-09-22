@@ -25,7 +25,7 @@ trait Uuid
      */
     public function setUuidIfEmpty(): void
     {
-        if (! is_null($this->getUuid())) {
+        if (is_null($this->getUuid())) {
             $this->setUuid();
         }
     }
@@ -43,7 +43,7 @@ trait Uuid
      */
     public function getUuid(): ?string
     {
-        return $this->getKeyName();
+        return $this->getKey();
     }
 
     /**
