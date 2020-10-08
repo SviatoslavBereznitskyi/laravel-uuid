@@ -23,7 +23,10 @@
   "autoload": {
     "psr-4": {
       "Nevadskiy\\Uuid\\": "src/"
-    }
+    },
+    "files": [
+      "helpers/constants.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
