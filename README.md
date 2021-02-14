@@ -1,6 +1,6 @@
 # Laravel UUID
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/nevadskiy/laravel-uuid.svg?style=flat-square)](https://packagist.org/packages/nevadskiy/laravel-uuid)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/nevadskiy/laravel-uuid.svg)](https://packagist.org/packages/nevadskiy/laravel-uuid)
 ![Tests](https://github.com/nevadskiy/laravel-uuid/workflows/Tests/badge.svg)
 
 The package provides UUID keys functionality for Eloquent models with one single trait.
