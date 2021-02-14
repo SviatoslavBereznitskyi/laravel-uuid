@@ -28,7 +28,7 @@ jobs:
                     coverage: none
 
             -   name: Install dependencies
-                run: composer install --no-interaction
+                run: composer update --no-interaction --no-suggest
 
             -   name: Run tests
                 run: vendor/bin/phpunit
