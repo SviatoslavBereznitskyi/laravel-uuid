@@ -1,5 +1,8 @@
 # Laravel UUID
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/nevadskiy/laravel-uuid.svg?style=flat-square)](https://packagist.org/packages/nevadskiy/laravel-uuid)
+![Tests](https://github.com/nevadskiy/laravel-uuid/workflows/Tests/badge.svg)
+
 The package provides UUID keys functionality for Eloquent models with one single trait.
 
 
@@ -7,7 +10,7 @@ The package provides UUID keys functionality for Eloquent models with one single
 
 Add a trait to your model, and it will automatically set the UUID during model creation.
 
-```
+```php
 <?php
 
 namespace App;
@@ -23,7 +26,7 @@ class Book extends Model
 
 Update your migrations to specify UUID type for a primary key.
 
-```
+```php
 Schema::create('books', function (Blueprint $table) {
     $table->uuid('id')->primary();
 });
@@ -41,8 +44,8 @@ composer require nevadskiy/laravel-uuid
 
 ## Requirements
 
-- Laravel `6.0` or newer  
-- PHP `7.3` or newer
+- Laravel `6.0` or newer
+- PHP `7.2` or newer
 
 
 ## Changelog
