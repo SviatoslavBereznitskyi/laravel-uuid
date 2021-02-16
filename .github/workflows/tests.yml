@@ -21,6 +21,9 @@ jobs:
                         testbench: 5.*
                     -   laravel: 6.*
                         testbench: 4.*
+                exclude:
+                    -   laravel: 8.*
+                    -   php: 7.2
 
         name: Run tests on PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }} - OS ${{ matrix.os }}
 
