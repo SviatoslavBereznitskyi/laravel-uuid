@@ -42,7 +42,7 @@ jobs:
                 with:
                     php-version: ${{ matrix.php }}
                     extensions: fileinfo, pdo, pdo_sqlite
-                    coverage: xdebug
+                    coverage: pcov
 
             -   name: Install dependencies
                 run: |
@@ -53,4 +53,4 @@ jobs:
                 run: vendor/bin/phpunit --coverage-clover=coverage.xml
 
             -   name: Code coverage
-                run: "bash <(curl -s https://codecov.io/bash) || true"
+                run: "bash <(curl -s https://codecov.io/bash)"
