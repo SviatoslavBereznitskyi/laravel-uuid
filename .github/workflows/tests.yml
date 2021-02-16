@@ -23,9 +23,9 @@ jobs:
                         testbench: 4.*
                 exclude:
                     -   laravel: 8.*
-                    -   php: 7.2
+                        php: 7.2
 
-        name: Run tests on PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }} - OS ${{ matrix.os }}
+        name: PHP ${{ matrix.php }}, Laravel ${{ matrix.laravel }}, OS ${{ matrix.os }}
 
         steps:
             -   name: Checkout code
@@ -40,7 +40,7 @@ jobs:
 
             -   name: Install dependencies
                 run: |
-                    composer require "illuminate/database:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
+                    composer require "illuminate/database:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --prefer-dist --no-interaction --no-progress --no-update
                     composer update --no-interaction
 
             -   name: Execute tests
