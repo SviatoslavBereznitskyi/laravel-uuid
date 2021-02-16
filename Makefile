@@ -21,9 +21,16 @@ outdated:
 test:
 	docker run --rm -it -v ${PWD}:/app app vendor/bin/phpunit
 
-# Generate a coverage report
-coverage:
-	docker run --rm -it -v ${PWD}:/app app vendor/bin/phpunit --coverage-html tests/report
+# Generate a coverage report as text
+coverage-text:
+	docker run --rm -it -v ${PWD}:/app app vendor/bin/phpunit --coverage-text
+
+# Generate a coverage report as HTML
+coverage-html:
+	docker run --rm -it -v ${PWD}:/app app vendor/bin/phpunit --coverage-html=tests/report
+
+# Coverage text alias
+coverage: coverage-text
 
 # Fix code style
 fix:
