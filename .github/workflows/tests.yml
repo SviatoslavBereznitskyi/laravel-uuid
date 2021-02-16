@@ -42,7 +42,7 @@ jobs:
                 with:
                     php-version: ${{ matrix.php }}
                     extensions: fileinfo, pdo, pdo_sqlite
-                    coverage: none
+                    coverage: xdebug
 
             -   name: Install dependencies
                 run: |
