@@ -7,6 +7,8 @@
 
 The package provides UUID keys functionality for Eloquent models with one single trait.
 
+More about using UUID as [primary keys](https://tomharrisonjr.com/uuid-or-guid-as-primary-keys-be-careful-7b2aa3dcb439).
+
 
 ## Usage
 
