@@ -11,19 +11,19 @@ use Ramsey\Uuid\Uuid as UuidFactory;
 trait Uuid
 {
     /**
-     * Boot the Uuid trait.
+     * Boot the uuid trait.
      */
     public static function bootUuid(): void
     {
         static::creating(static function (self $model) {
-            $model->setUuidIfEmpty();
+            $model->setUuidIfMissing();
         });
     }
 
     /**
-     * Set UUID to the model if it is not set yet.
+     * Set the uuid key to the model if it is missing.
      */
-    public function setUuidIfEmpty(): void
+    public function setUuidIfMissing(): void
     {
         if (is_null($this->getUuid())) {
             $this->setUuid();
@@ -31,7 +31,7 @@ trait Uuid
     }
 
     /**
-     * Set a UUID to the model.
+     * Set the uuid key to the model.
      */
     public function setUuid(): void
     {
@@ -39,7 +39,7 @@ trait Uuid
     }
 
     /**
-     * Get a UUID of the model.
+     * Get the uuid key of the model.
      */
     public function getUuid(): ?string
     {
@@ -47,7 +47,7 @@ trait Uuid
     }
 
     /**
-     * Generate UUID.
+     * Generate the uuid key.
      */
     public static function generateId(): string
     {
