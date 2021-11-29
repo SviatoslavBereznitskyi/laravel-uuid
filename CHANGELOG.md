@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 
+## [0.7.0] - 2021-11-29
+### Changed
+- Rename `UUID_ROUTE_PATTERN` constant
+- Rename `setUuidIfMissing` method
+
 ## [0.6.0] - 2021-02-14
 ### Added
 - PHP 8 support
