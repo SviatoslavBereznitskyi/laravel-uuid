@@ -1,5 +1,7 @@
 # Laravel UUID
 
+**This package is a fork of nevadskiy/laravel-uuid.**
+
 [![Latest Stable Version](https://poser.pugx.org/nevadskiy/laravel-uuid/v)](https://packagist.org/packages/nevadskiy/laravel-uuid)
 ![Tests](https://github.com/nevadskiy/laravel-uuid/workflows/Tests/badge.svg)
 ![Code Coverage](https://codecov.io/gh/nevadskiy/laravel-uuid/branch/master/graphs/badge.svg?branch=master)
