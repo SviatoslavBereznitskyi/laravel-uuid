@@ -44,14 +44,14 @@ Schema::create('books', function (Blueprint $table) {
 Install a package via composer.
 
 ```
-composer require nevadskiy/laravel-uuid
+composer require imcity-tech/laravel-uuid
 ```
 
 
 ## Requirements
 
-- Laravel `6.0` or newer
-- PHP `7.2` or newer
+- Laravel `9.0` or newer
+- PHP `8.0` or newer
 
 
 ## Changelog
